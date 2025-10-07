@@ -20,3 +20,9 @@ fetch('http://makeup-api.herokuapp.com/api/v1/products.json?brand=maybelline')
             
         }
     })
+
+boton.onclick = function () {
+.then(productos => {
+let articulo = document.querySelector('.productos')
+
+for (let index = 0; index <
