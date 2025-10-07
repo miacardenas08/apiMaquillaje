@@ -25,4 +25,8 @@ boton.onclick = function () {
 .then(productos => {
 let articulo = document.querySelector('.productos')
 
-for (let index = 0; index <
+for (let index = 0; index < 3; index++) {
+articulo.innerHTML = '<h2>${producto.title}</h2>
+<img src= "${producto.image}">
+<p>${producto.description}</p>
+'
