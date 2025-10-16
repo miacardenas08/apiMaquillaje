@@ -1,10 +1,18 @@
 //Enlace de la api a consumir
 let contenedor = document.querySelector('.contenedor')
 let precio = document.querySelector('#precio')
+let precio2 = document.querySelector('#precio2')
+let imagen1 = document.querySelector('#imagen1')
+let imagen2 = document.querySelector('#imagen2')
 fetch('http://makeup-api.herokuapp.com/api/v1/products.json?brand=maybelline')
     .then(respuesta => respuesta.json())
     .then(productos => {
         precio.textContent =`Precio $${productos[0].price}`
+        imagen1.src = productos[0].image_link
+
+        precio.textContent =`Precio $${productos[1].price}`
+        imagen1.src = productos[1].image_link
+
         for (let index = 0; index < 5; index++) {
             console.log(`Producto en stock: ${productos[index].name}`)
             contenedor.innerHTML += `<button>${productos[index].name}</button>
