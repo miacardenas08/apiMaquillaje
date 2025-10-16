@@ -14,8 +14,6 @@ fetch('http://makeup-api.herokuapp.com/api/v1/products.json?brand=maybelline')
         precio.textContent =`Precio $${productos[1].price}`
         imagen1.src = productos[1].image_link
 
-         precio.textContent =`Precio $${productos[2].price}`
-        imagen1.src = productos[2].image_link
 
         for (let index = 0; index < 5; index++) {
             console.log(`Producto en stock: ${productos[index].name}`)
@@ -42,17 +40,7 @@ fetch('http://makeup-api.herokuapp.com/api/v1/products.json?brand=maybelline')
     `
   }
 
-  for (let i = 0; i < 10; i++) {
-    document.getElementById(`btn${i}`).onclick = () => {
-      infoProducto.innerHTML = `
-        <b>${productos[i].name}</b><br>
-        Precio: $${productos[i].price || "***"}<br>
-        Marca: ${productos[i].brand}<br>
-        <img src="${productos[i].image_link}" width="150"><br>
-        <a href="${productos[i].product_link}" target="_blank">Ver producto</a>
-      `
-    }
-  }
+ 
 
 
 /*
